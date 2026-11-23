@@ -1,0 +1,30 @@
+# AI6 per-car scale of the speed profiles (ai_cars.py calibrate, 2026-10-19)
+# <.ais name> <scale>: the profiles are tuned with default.sim/default.ais. * = cars without a line, 0 = the car keeps
+# the planner + .aispeed. Lap time first (user 2026-10-19): per car the scale with the lowest lap time + 10 s per
+# real crash (rollover/spin/stall/heavy hit; light contacts are free) on gt2/uk/france/rockypas/summit x 4 cars,
+# Gt1 on all 19 tracks (0.85-1.05: 1.05 best, the edge of the grid). Identical .ais (918 = CarreraGT = Gt1 = Gt4,
+# 356A = 356B, 901 = 930t, 928 = 965t) take the lowest listed scale of their group; 918, CarreraGT, Gt4
+# (unfinished car additions) are left out, their cars count as Gt1.
+* 1
+356 0.73
+356A 0.73
+356B 0.73
+550a 0.85
+901 0.79
+914 0.85
+928 0.92
+930t 0.85
+935 1.06
+944 0.85
+959 0.92
+964 0.85
+965t 0.92
+993 0.92
+993t 0.99
+996 0.92
+996t 0.99
+Gt1 1.05
+Gt2 0.85
+Gt3 0.92
+boxster 0.92
+default 1

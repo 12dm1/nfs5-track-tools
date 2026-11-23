@@ -1,0 +1,33 @@
+# local configuration and scratch
+nfs5tools.ini
+work/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# editors
+imgui.ini
+.vscode/
+.idea/
+
+# never commit game data
+*.crp
+*.drp
+*.fsh
+*.qfs
+*.viv
+*.bnk
+*.frd
+*.exe
+*.dll
+*.wav
+*.png
+*.dds
+*.bin
+
+# imgui window layouts written into the current folder
+track_editor__*.ini
+texture_editor*.ini

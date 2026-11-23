@@ -1,0 +1,3192 @@
+{
+ "tram_bank": {
+  "Hills": 12,
+  "Germany": 15,
+  "Coastal": 10,
+  "Park": 13,
+  "France": 16,
+  "Uk": 14,
+  "Snowy": 11,
+  "Gt1": 17,
+  "Gt2": 17,
+  "Gt3": 17,
+  "Hometown": 0,
+  "Redrock": 1,
+  "Atlantic": 2,
+  "RockyPas": 3,
+  "Country": 4,
+  "LostCany": 5,
+  "Aquatica": 6,
+  "Summit": 7,
+  "Empire": 8
+ },
+ "volume": {
+  "Hills": 75,
+  "Germany": 75,
+  "Coastal": 75,
+  "Park": 75,
+  "France": 75,
+  "Uk": 75,
+  "Snowy": 75,
+  "Gt1": 75,
+  "Gt2": 75,
+  "Gt3": 75,
+  "Hometown": 75,
+  "Redrock": 63,
+  "Atlantic": 63,
+  "RockyPas": 75,
+  "Country": 75,
+  "LostCany": 75,
+  "Aquatica": 45,
+  "Summit": 75,
+  "Empire": 75
+ },
+ "loop_zones": {
+  "Hills": [
+   {
+    "start": 700,
+    "fade_in_end": 710,
+    "fade_out_start": 740,
+    "end": 750,
+    "slot": 0,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 490,
+    "fade_in_end": 495,
+    "fade_out_start": 615,
+    "end": 620,
+    "slot": 1,
+    "side": 0,
+    "volume": 90
+   }
+  ],
+  "Germany": [
+   {
+    "start": 10,
+    "fade_in_end": 20,
+    "fade_out_start": 220,
+    "end": 230,
+    "slot": 32,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 400,
+    "fade_in_end": 410,
+    "fade_out_start": 630,
+    "end": 640,
+    "slot": 32,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 369,
+    "fade_in_end": 374,
+    "fade_out_start": 380,
+    "end": 385,
+    "slot": 51,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 354,
+    "fade_in_end": 360,
+    "fade_out_start": 364,
+    "end": 370,
+    "slot": 52,
+    "side": -1,
+    "volume": 127
+   }
+  ],
+  "Coastal": [
+   {
+    "start": 1045,
+    "fade_in_end": 1050,
+    "fade_out_start": 1074,
+    "end": 1074,
+    "slot": 9,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 0,
+    "fade_in_end": 0,
+    "fade_out_start": 21,
+    "end": 30,
+    "slot": 9,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 830,
+    "fade_in_end": 840,
+    "fade_out_start": 950,
+    "end": 955,
+    "slot": 48,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 970,
+    "fade_in_end": 974,
+    "fade_out_start": 1010,
+    "end": 1030,
+    "slot": 48,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 330,
+    "fade_in_end": 335,
+    "fade_out_start": 570,
+    "end": 580,
+    "slot": 23,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 615,
+    "fade_in_end": 618,
+    "fade_out_start": 633,
+    "end": 633,
+    "slot": 2,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 634,
+    "fade_in_end": 634,
+    "fade_out_start": 637,
+    "end": 641,
+    "slot": 2,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 650,
+    "fade_in_end": 656,
+    "fade_out_start": 662,
+    "end": 662,
+    "slot": 2,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 663,
+    "fade_in_end": 663,
+    "fade_out_start": 674,
+    "end": 679,
+    "slot": 2,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 680,
+    "fade_in_end": 690,
+    "fade_out_start": 805,
+    "end": 815,
+    "slot": 24,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 1032,
+    "fade_in_end": 1036,
+    "fade_out_start": 1042,
+    "end": 1044,
+    "slot": 70,
+    "side": 1,
+    "volume": 127
+   }
+  ],
+  "Park": [
+   {
+    "start": 0,
+    "fade_in_end": 10,
+    "fade_out_start": 90,
+    "end": 100,
+    "slot": 0,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 860,
+    "fade_in_end": 870,
+    "fade_out_start": 930,
+    "end": 938,
+    "slot": 0,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 300,
+    "fade_in_end": 305,
+    "fade_out_start": 445,
+    "end": 450,
+    "slot": 1,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 560,
+    "fade_in_end": 570,
+    "fade_out_start": 585,
+    "end": 600,
+    "slot": 2,
+    "side": 0,
+    "volume": 127
+   }
+  ],
+  "France": [
+   {
+    "start": 785,
+    "fade_in_end": 795,
+    "fade_out_start": 855,
+    "end": 865,
+    "slot": 0,
+    "side": 0,
+    "volume": 90
+   },
+   {
+    "start": 166,
+    "fade_in_end": 170,
+    "fade_out_start": 205,
+    "end": 210,
+    "slot": 3,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 80,
+    "fade_in_end": 83,
+    "fade_out_start": 115,
+    "end": 117,
+    "slot": 5,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 143,
+    "fade_in_end": 146,
+    "fade_out_start": 148,
+    "end": 152,
+    "slot": 51,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 118,
+    "fade_in_end": 121,
+    "fade_out_start": 124,
+    "end": 127,
+    "slot": 51,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 70,
+    "fade_in_end": 73,
+    "fade_out_start": 75,
+    "end": 78,
+    "slot": 51,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 155,
+    "fade_in_end": 157,
+    "fade_out_start": 162,
+    "end": 165,
+    "slot": 56,
+    "side": 0,
+    "volume": 127
+   }
+  ],
+  "Uk": [
+   {
+    "start": 675,
+    "fade_in_end": 682,
+    "fade_out_start": 700,
+    "end": 705,
+    "slot": 11,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 639,
+    "fade_in_end": 643,
+    "fade_out_start": 649,
+    "end": 653,
+    "slot": 12,
+    "side": 1,
+    "volume": 127
+   }
+  ],
+  "Snowy": [],
+  "Gt1": [
+   {
+    "start": 790,
+    "fade_in_end": 811,
+    "fade_out_start": 831,
+    "end": 831,
+    "slot": 16,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 0,
+    "fade_in_end": 0,
+    "fade_out_start": 15,
+    "end": 30,
+    "slot": 16,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 265,
+    "fade_in_end": 280,
+    "fade_out_start": 296,
+    "end": 310,
+    "slot": 16,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 457,
+    "fade_in_end": 477,
+    "fade_out_start": 488,
+    "end": 508,
+    "slot": 16,
+    "side": -1,
+    "volume": 127
+   }
+  ],
+  "Gt2": [
+   {
+    "start": 843,
+    "fade_in_end": 864,
+    "fade_out_start": 879,
+    "end": 879,
+    "slot": 16,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 0,
+    "fade_in_end": 0,
+    "fade_out_start": 14,
+    "end": 25,
+    "slot": 16,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 40,
+    "fade_in_end": 49,
+    "fade_out_start": 63,
+    "end": 73,
+    "slot": 16,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 370,
+    "fade_in_end": 387,
+    "fade_out_start": 406,
+    "end": 420,
+    "slot": 16,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 565,
+    "fade_in_end": 578,
+    "fade_out_start": 598,
+    "end": 610,
+    "slot": 16,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 755,
+    "fade_in_end": 763,
+    "fade_out_start": 782,
+    "end": 790,
+    "slot": 16,
+    "side": -1,
+    "volume": 127
+   }
+  ],
+  "Gt3": [
+   {
+    "start": 920,
+    "fade_in_end": 930,
+    "fade_out_start": 951,
+    "end": 951,
+    "slot": 16,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 0,
+    "fade_in_end": 0,
+    "fade_out_start": 15,
+    "end": 20,
+    "slot": 16,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 20,
+    "fade_in_end": 25,
+    "fade_out_start": 35,
+    "end": 40,
+    "slot": 16,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 365,
+    "fade_in_end": 371,
+    "fade_out_start": 381,
+    "end": 385,
+    "slot": 16,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 590,
+    "fade_in_end": 601,
+    "fade_out_start": 605,
+    "end": 615,
+    "slot": 16,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 735,
+    "fade_in_end": 745,
+    "fade_out_start": 757,
+    "end": 767,
+    "slot": 16,
+    "side": -1,
+    "volume": 127
+   },
+   {
+    "start": 875,
+    "fade_in_end": 882,
+    "fade_out_start": 893,
+    "end": 895,
+    "slot": 16,
+    "side": 1,
+    "volume": 127
+   }
+  ],
+  "Hometown": [
+   {
+    "start": 65,
+    "fade_in_end": 75,
+    "fade_out_start": 76,
+    "end": 86,
+    "slot": 8,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 65,
+    "fade_in_end": 75,
+    "fade_out_start": 76,
+    "end": 86,
+    "slot": 9,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 161,
+    "fade_in_end": 171,
+    "fade_out_start": 178,
+    "end": 188,
+    "slot": 1,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 195,
+    "fade_in_end": 205,
+    "fade_out_start": 223,
+    "end": 233,
+    "slot": 1,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 582,
+    "fade_in_end": 602,
+    "fade_out_start": 608,
+    "end": 628,
+    "slot": 1,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 620,
+    "fade_in_end": 655,
+    "fade_out_start": 732,
+    "end": 760,
+    "slot": 2,
+    "side": -1,
+    "volume": 127
+   }
+  ],
+  "Redrock": [
+   {
+    "start": 1230,
+    "fade_in_end": 1240,
+    "fade_out_start": 1340,
+    "end": 1346,
+    "slot": 0,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 1346,
+    "fade_in_end": 1352,
+    "fade_out_start": 1370,
+    "end": 1380,
+    "slot": 0,
+    "side": 1,
+    "volume": 127
+   }
+  ],
+  "Atlantic": [
+   {
+    "start": 25,
+    "fade_in_end": 45,
+    "fade_out_start": 65,
+    "end": 75,
+    "slot": 3,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 330,
+    "fade_in_end": 342,
+    "fade_out_start": 372,
+    "end": 382,
+    "slot": 4,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 910,
+    "fade_in_end": 930,
+    "fade_out_start": 1066,
+    "end": 1086,
+    "slot": 9,
+    "side": -1,
+    "volume": 127
+   }
+  ],
+  "RockyPas": [
+   {
+    "start": 0,
+    "fade_in_end": 10,
+    "fade_out_start": 390,
+    "end": 400,
+    "slot": 11,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 410,
+    "fade_in_end": 425,
+    "fade_out_start": 445,
+    "end": 460,
+    "slot": 1,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 1035,
+    "fade_in_end": 1050,
+    "fade_out_start": 1070,
+    "end": 1085,
+    "slot": 4,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 1400,
+    "fade_in_end": 1410,
+    "fade_out_start": 1470,
+    "end": 1480,
+    "slot": 11,
+    "side": 0,
+    "volume": 127
+   }
+  ],
+  "Country": [
+   {
+    "start": 305,
+    "fade_in_end": 310,
+    "fade_out_start": 330,
+    "end": 335,
+    "slot": 12,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 1061,
+    "fade_in_end": 1096,
+    "fade_out_start": 1173,
+    "end": 1201,
+    "slot": 1,
+    "side": -1,
+    "volume": 127
+   }
+  ],
+  "LostCany": [
+   {
+    "start": 1555,
+    "fade_in_end": 1570,
+    "fade_out_start": 1597,
+    "end": 1620,
+    "slot": 0,
+    "side": 1,
+    "volume": 127
+   }
+  ],
+  "Aquatica": [
+   {
+    "start": 25,
+    "fade_in_end": 45,
+    "fade_out_start": 65,
+    "end": 75,
+    "slot": 3,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 598,
+    "fade_in_end": 608,
+    "fade_out_start": 702,
+    "end": 715,
+    "slot": 11,
+    "side": 0,
+    "volume": 127
+   },
+   {
+    "start": 735,
+    "fade_in_end": 752,
+    "fade_out_start": 985,
+    "end": 1000,
+    "slot": 16,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 1020,
+    "fade_in_end": 1037,
+    "fade_out_start": 1176,
+    "end": 1190,
+    "slot": 9,
+    "side": -1,
+    "volume": 127
+   }
+  ],
+  "Summit": [],
+  "Empire": [
+   {
+    "start": 200,
+    "fade_in_end": 226,
+    "fade_out_start": 286,
+    "end": 310,
+    "slot": 7,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 1200,
+    "fade_in_end": 1218,
+    "fade_out_start": 1229,
+    "end": 1229,
+    "slot": 4,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 0,
+    "fade_in_end": 0,
+    "fade_out_start": 70,
+    "end": 90,
+    "slot": 4,
+    "side": 1,
+    "volume": 127
+   },
+   {
+    "start": 116,
+    "fade_in_end": 126,
+    "fade_out_start": 177,
+    "end": 190,
+    "slot": 4,
+    "side": 1,
+    "volume": 127
+   }
+  ]
+ },
+ "object_sounds": {
+  "Hills": [],
+  "Germany": [],
+  "Coastal": [],
+  "Park": [
+   [
+    0,
+    0,
+    80,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    81,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    100,
+    -32,
+    64,
+    342,
+    348,
+    440,
+    445,
+    -4,
+    -1
+   ],
+   [
+    100,
+    32,
+    67,
+    342,
+    348,
+    440,
+    445,
+    -4,
+    -65
+   ],
+   [
+    0,
+    0,
+    84,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    85,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    100,
+    -32,
+    64,
+    750,
+    760,
+    862,
+    870,
+    -4,
+    -1
+   ],
+   [
+    100,
+    32,
+    67,
+    750,
+    760,
+    862,
+    870,
+    -4,
+    -65
+   ],
+   [
+    0,
+    0,
+    86,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    87,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    82,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ]
+  ],
+  "France": [],
+  "Uk": [
+   [
+    0,
+    0,
+    80,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    81,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    82,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    83,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    84,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    85,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    86,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    87,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    88,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    89,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    90,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    91,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ]
+  ],
+  "Snowy": [],
+  "Gt1": [],
+  "Gt2": [],
+  "Gt3": [],
+  "Hometown": [
+   [
+    300,
+    0,
+    31,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ]
+  ],
+  "Redrock": [],
+  "Atlantic": [
+   [
+    400,
+    0,
+    6,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    250,
+    0,
+    1,
+    176,
+    180,
+    1918,
+    1914,
+    0,
+    2
+   ],
+   [
+    200,
+    0,
+    1,
+    60,
+    64,
+    1968,
+    1964,
+    0,
+    2
+   ]
+  ],
+  "RockyPas": [],
+  "Country": [],
+  "LostCany": [
+   [
+    250,
+    -32,
+    6,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    -1,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    -1,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    0,
+    0,
+    -1,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ]
+  ],
+  "Aquatica": [
+   [
+    500,
+    0,
+    6,
+    -1,
+    900,
+    2560,
+    8988,
+    -2,
+    -7
+   ],
+   [
+    175,
+    0,
+    13,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ]
+  ],
+  "Summit": [
+   [
+    100,
+    0,
+    0,
+    -1,
+    128,
+    0,
+    0,
+    -3,
+    0
+   ],
+   [
+    100,
+    0,
+    0,
+    -1,
+    128,
+    0,
+    0,
+    -3,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    -6684,
+    90
+   ],
+   [
+    0,
+    0,
+    -6486,
+    90,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    -6180,
+    90,
+    0,
+    0,
+    -6000,
+    90
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    -6162,
+    90,
+    -5946,
+    90,
+    -5910
+   ],
+   [
+    90,
+    -6090,
+    90,
+    0,
+    0,
+    16439,
+    16464,
+    19270,
+    14144
+   ],
+   [
+    17980,
+    16448,
+    16448,
+    64,
+    99,
+    0,
+    64,
+    0,
+    75
+   ],
+   [
+    0,
+    75,
+    0,
+    75,
+    0,
+    75,
+    0,
+    75,
+    0
+   ],
+   [
+    75,
+    0,
+    75,
+    0,
+    75,
+    0,
+    75,
+    0,
+    75
+   ],
+   [
+    0,
+    75,
+    0,
+    63,
+    0,
+    63,
+    0,
+    75,
+    0
+   ],
+   [
+    75,
+    0,
+    75,
+    0,
+    45,
+    0,
+    75,
+    0,
+    75
+   ]
+  ],
+  "Empire": [
+   [
+    100,
+    0,
+    80,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    100,
+    0,
+    81,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    250,
+    0,
+    6,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    100,
+    0,
+    82,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ],
+   [
+    250,
+    0,
+    3,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    -1
+   ]
+  ]
+ },
+ "oneshot_scripts": {
+  "Hills": [
+   {
+    "slices": [
+     [
+      550,
+      575
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     49,
+     8000
+    ],
+    "slot": [
+     48,
+     9
+    ],
+    "vol": [
+     35,
+     40
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      30,
+      50
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     49,
+     8000
+    ],
+    "slot": [
+     16,
+     4
+    ],
+    "vol": [
+     28,
+     90
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      3,
+      10
+     ]
+    ],
+    "speed": [
+     5,
+     "jg"
+    ],
+    "prob": [
+     199,
+     8000
+    ],
+    "slot": [
+     20,
+     10
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      890,
+      893
+     ]
+    ],
+    "speed": [
+     4,
+     "jg"
+    ],
+    "prob": [
+     49,
+     8000
+    ],
+    "slot": [
+     64,
+     6
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [],
+    "speed": [
+     9,
+     "jl"
+    ],
+    "prob": [
+     49,
+     8000
+    ],
+    "slot": [
+     64,
+     6
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      60,
+      150
+     ],
+     [
+      350,
+      535
+     ],
+     [
+      580,
+      670
+     ],
+     [
+      760,
+      870
+     ],
+     [
+      915,
+      1070
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     32,
+     7
+    ],
+    "vol": [
+     28,
+     50
+    ],
+    "pan": "random"
+   }
+  ],
+  "Germany": [
+   {
+    "slices": [
+     [
+      328,
+      335
+     ]
+    ],
+    "speed": [
+     8,
+     "jl"
+    ],
+    "prob": [
+     49,
+     100
+    ],
+    "slot": [
+     67,
+     1
+    ],
+    "vol": [
+     64,
+     64
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      2,
+      2
+     ]
+    ],
+    "speed": [
+     3,
+     "jg"
+    ],
+    "prob": [
+     9,
+     2000
+    ],
+    "slot": [
+     49,
+     1
+    ],
+    "vol": [
+     64,
+     64
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      10,
+      10
+     ]
+    ],
+    "speed": [
+     3,
+     "jg"
+    ],
+    "prob": [
+     9,
+     2000
+    ],
+    "slot": [
+     50,
+     1
+    ],
+    "vol": [
+     64,
+     64
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      1082,
+      1084
+     ]
+    ],
+    "speed": [
+     3,
+     "jg"
+    ],
+    "prob": [
+     9,
+     2000
+    ],
+    "slot": [
+     53,
+     1
+    ],
+    "vol": [
+     64,
+     64
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      20,
+      220
+     ],
+     [
+      410,
+      630
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     16,
+     11
+    ],
+    "vol": [
+     28,
+     90
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      240,
+      300
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     49,
+     8000
+    ],
+    "slot": [
+     64,
+     3
+    ],
+    "vol": [
+     28,
+     40
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      110,
+      130
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     68,
+     7
+    ],
+    "vol": [
+     48,
+     70
+    ],
+    "pan": "side"
+   }
+  ],
+  "Coastal": [
+   {
+    "slices": [
+     [
+      841,
+      1019
+     ],
+     [
+      61,
+      231
+     ],
+     [
+      260,
+      319
+     ],
+     [
+      146,
+      155
+     ],
+     [
+      169,
+      193
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     4,
+     200
+    ],
+    "slot": [
+     49,
+     3
+    ],
+    "vol": null,
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      1040,
+      1074
+     ],
+     [
+      0,
+      21
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     199,
+     8000
+    ],
+    "slot": [
+     5,
+     4
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      630,
+      805
+     ],
+     [
+      335,
+      570
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     16,
+     7
+    ],
+    "vol": [
+     28,
+     70
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      613,
+      618
+     ]
+    ],
+    "speed": [
+     9,
+     "jl"
+    ],
+    "prob": [
+     9,
+     200
+    ],
+    "slot": [
+     32,
+     4
+    ],
+    "vol": [
+     64,
+     64
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      1036,
+      1042
+     ]
+    ],
+    "speed": [
+     8,
+     "jl"
+    ],
+    "prob": [
+     4,
+     200
+    ],
+    "slot": [
+     64,
+     5
+    ],
+    "vol": [
+     64,
+     64
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      19,
+      23
+     ]
+    ],
+    "speed": [
+     8,
+     "jl"
+    ],
+    "prob": [
+     4,
+     2000
+    ],
+    "slot": [
+     69,
+     1
+    ],
+    "vol": [
+     64,
+     64
+    ],
+    "pan": "side"
+   }
+  ],
+  "Park": [
+   {
+    "slices": [
+     [
+      90,
+      150
+     ],
+     [
+      190,
+      220
+     ],
+     [
+      260,
+      290
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     49,
+     8000
+    ],
+    "slot": [
+     16,
+     5
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      90,
+      290
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     49,
+     8000
+    ],
+    "slot": [
+     21,
+     1
+    ],
+    "vol": [
+     104,
+     24
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      0,
+      90
+     ],
+     [
+      350,
+      425
+     ],
+     [
+      600,
+      850
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     32,
+     7
+    ],
+    "vol": [
+     28,
+     70
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      475,
+      555
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     49,
+     8000
+    ],
+    "slot": [
+     48,
+     5
+    ],
+    "vol": [
+     28,
+     80
+    ],
+    "pan": "random"
+   }
+  ],
+  "France": [
+   {
+    "slices": [
+     [
+      125,
+      135
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     57,
+     1
+    ],
+    "vol": [
+     28,
+     80
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [],
+    "speed": null,
+    "prob": [
+     49,
+     100
+    ],
+    "slot": [
+     58,
+     1
+    ],
+    "vol": [
+     28,
+     80
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      157,
+      165
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     37,
+     4
+    ],
+    "vol": [
+     28,
+     90
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      500,
+      510
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     32,
+     9
+    ],
+    "vol": [
+     28,
+     80
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      0,
+      35
+     ],
+     [
+      205,
+      972
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     16,
+     9
+    ],
+    "vol": [
+     28,
+     70
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      73,
+      75
+     ],
+     [
+      121,
+      124
+     ],
+     [
+      146,
+      148
+     ]
+    ],
+    "speed": [
+     5,
+     "jg"
+    ],
+    "prob": [
+     9,
+     2000
+    ],
+    "slot": [
+     48,
+     3
+    ],
+    "vol": [
+     64,
+     64
+    ],
+    "pan": "side"
+   }
+  ],
+  "Uk": [
+   {
+    "slices": [
+     [
+      510,
+      560
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     48,
+     13
+    ],
+    "vol": [
+     25,
+     60
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      0,
+      250
+     ],
+     [
+      300,
+      500
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     32,
+     15
+    ],
+    "vol": [
+     28,
+     60
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      682,
+      700
+     ]
+    ],
+    "speed": [
+     5,
+     "jg"
+    ],
+    "prob": [
+     9,
+     2000
+    ],
+    "slot": [
+     10,
+     1
+    ],
+    "vol": [
+     32,
+     64
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      643,
+      649
+     ]
+    ],
+    "speed": [
+     8,
+     "jl"
+    ],
+    "prob": [
+     9,
+     2000
+    ],
+    "slot": [
+     13,
+     1
+    ],
+    "vol": [
+     64,
+     64
+    ],
+    "pan": "side"
+   }
+  ],
+  "Snowy": [
+   {
+    "slices": [
+     [
+      25,
+      25
+     ],
+     [
+      26,
+      26
+     ]
+    ],
+    "speed": [
+     3,
+     "jg"
+    ],
+    "prob": null,
+    "slot": [
+     5,
+     1
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      120,
+      145
+     ],
+     [
+      455,
+      500
+     ],
+     [
+      570,
+      615
+     ],
+     [
+      670,
+      705
+     ],
+     [
+      810,
+      920
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     29,
+     8000
+    ],
+    "slot": [
+     16,
+     2
+    ],
+    "vol": [
+     28,
+     70
+    ],
+    "pan": "side"
+   }
+  ],
+  "Gt1": [
+   {
+    "slices": [
+     [
+      811,
+      831
+     ],
+     [
+      0,
+      15
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     149,
+     8000
+    ],
+    "slot": [
+     17,
+     9
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      280,
+      296
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     124,
+     8000
+    ],
+    "slot": [
+     17,
+     9
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      477,
+      488
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     124,
+     8000
+    ],
+    "slot": [
+     17,
+     9
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [],
+    "speed": null,
+    "prob": [
+     49,
+     8000
+    ],
+    "slot": [
+     0,
+     6
+    ],
+    "vol": [
+     28,
+     70
+    ],
+    "pan": "random"
+   }
+  ],
+  "Gt2": [
+   {
+    "slices": [
+     [
+      49,
+      63
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     124,
+     8000
+    ],
+    "slot": [
+     17,
+     9
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      578,
+      598
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     124,
+     8000
+    ],
+    "slot": [
+     17,
+     9
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      864,
+      879
+     ],
+     [
+      0,
+      14
+     ],
+     [
+      387,
+      406
+     ],
+     [
+      763,
+      766
+     ],
+     [
+      778,
+      782
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     149,
+     8000
+    ],
+    "slot": [
+     17,
+     9
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [],
+    "speed": null,
+    "prob": [
+     49,
+     8000
+    ],
+    "slot": [
+     0,
+     6
+    ],
+    "vol": [
+     28,
+     70
+    ],
+    "pan": "random"
+   }
+  ],
+  "Gt3": [
+   {
+    "slices": [
+     [
+      930,
+      951
+     ],
+     [
+      0,
+      35
+     ],
+     [
+      371,
+      381
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     149,
+     8000
+    ],
+    "slot": [
+     17,
+     9
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      25,
+      35
+     ],
+     [
+      601,
+      605
+     ],
+     [
+      882,
+      893
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     124,
+     8000
+    ],
+    "slot": [
+     17,
+     9
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      745,
+      757
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     124,
+     8000
+    ],
+    "slot": [
+     17,
+     9
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [],
+    "speed": null,
+    "prob": [
+     49,
+     8000
+    ],
+    "slot": [
+     0,
+     6
+    ],
+    "vol": [
+     28,
+     70
+    ],
+    "pan": "random"
+   }
+  ],
+  "Hometown": [
+   {
+    "slices": [
+     [
+      235,
+      485
+     ],
+     [
+      580,
+      850
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     199,
+     8000
+    ],
+    "slot": [
+     11,
+     3
+    ],
+    "vol": [
+     28,
+     100
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      66,
+      84
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     9,
+     5000
+    ],
+    "slot": [
+     10,
+     1
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      936,
+      939
+     ]
+    ],
+    "speed": [
+     10,
+     "jle"
+    ],
+    "prob": [
+     19,
+     5000
+    ],
+    "slot": [
+     16,
+     2
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "side"
+   }
+  ],
+  "Redrock": [
+   {
+    "slices": [
+     [
+      166,
+      166
+     ],
+     [
+      167,
+      167
+     ]
+    ],
+    "speed": null,
+    "prob": null,
+    "slot": [
+     3,
+     1
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      1033,
+      1100
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     9,
+     4000
+    ],
+    "slot": [
+     11,
+     1
+    ],
+    "vol": [
+     50,
+     40
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      201,
+      314
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     49,
+     5000
+    ],
+    "slot": [
+     18,
+     1
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      361,
+      444
+     ],
+     [
+      854,
+      949
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     9,
+     5000
+    ],
+    "slot": [
+     16,
+     1
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      11,
+      11
+     ],
+     [
+      12,
+      12
+     ]
+    ],
+    "speed": [
+     4,
+     "jg"
+    ],
+    "prob": [
+     99,
+     5000
+    ],
+    "slot": [
+     14,
+     1
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "side"
+   }
+  ],
+  "Atlantic": [
+   {
+    "slices": [
+     [
+      1066,
+      1066
+     ]
+    ],
+    "speed": null,
+    "prob": null,
+    "slot": null,
+    "vol": [
+     0,
+     1
+    ],
+    "pan": "side"
+   }
+  ],
+  "RockyPas": [
+   {
+    "slices": [
+     [
+      652,
+      945
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     9,
+     4000
+    ],
+    "slot": [
+     3,
+     1
+    ],
+    "vol": [
+     64,
+     64
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      20,
+      400
+     ],
+     [
+      1400,
+      1480
+     ]
+    ],
+    "speed": null,
+    "prob": null,
+    "slot": null,
+    "vol": [
+     0,
+     1
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      20,
+      400
+     ],
+     [
+      1400,
+      1480
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     24,
+     5000
+    ],
+    "slot": [
+     17,
+     3
+    ],
+    "vol": [
+     80,
+     45
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      1320,
+      1372
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     49,
+     5000
+    ],
+    "slot": [
+     7,
+     1
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      857,
+      904
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     49,
+     5000
+    ],
+    "slot": [
+     8,
+     1
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "side"
+   }
+  ],
+  "Country": [
+   {
+    "slices": [
+     [
+      355,
+      355
+     ],
+     [
+      356,
+      356
+     ]
+    ],
+    "speed": null,
+    "prob": null,
+    "slot": [
+     10,
+     1
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      300,
+      500
+     ]
+    ],
+    "speed": null,
+    "prob": null,
+    "slot": [
+     6,
+     2
+    ],
+    "vol": null,
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      235,
+      310
+     ],
+     [
+      415,
+      590
+     ],
+     [
+      610,
+      1018
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     5,
+     1
+    ],
+    "vol": [
+     5,
+     75
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      235,
+      310
+     ],
+     [
+      415,
+      590
+     ],
+     [
+      610,
+      1018
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     19,
+     8000
+    ],
+    "slot": [
+     8,
+     2
+    ],
+    "vol": [
+     5,
+     75
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      323,
+      323
+     ]
+    ],
+    "speed": [
+     9,
+     "jle"
+    ],
+    "prob": null,
+    "slot": [
+     13,
+     1
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      315,
+      323
+     ]
+    ],
+    "speed": [
+     2,
+     "jne"
+    ],
+    "prob": null,
+    "slot": [
+     15,
+     1
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "side"
+   }
+  ],
+  "LostCany": [
+   {
+    "slices": [
+     [
+      166,
+      166
+     ],
+     [
+      167,
+      167
+     ]
+    ],
+    "speed": null,
+    "prob": null,
+    "slot": [
+     3,
+     1
+    ],
+    "vol": [
+     127,
+     1
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      501,
+      699
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     19,
+     5000
+    ],
+    "slot": [
+     10,
+     2
+    ],
+    "vol": [
+     90,
+     37
+    ],
+    "pan": "side"
+   }
+  ],
+  "Aquatica": [
+   {
+    "slices": [
+     [
+      752,
+      990
+     ]
+    ],
+    "speed": null,
+    "prob": null,
+    "slot": null,
+    "vol": [
+     0,
+     1
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [
+     [
+      224,
+      316
+     ],
+     [
+      356,
+      419
+     ],
+     [
+      786,
+      849
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     9,
+     200
+    ],
+    "slot": [
+     8,
+     1
+    ],
+    "vol": [
+     64,
+     64
+    ],
+    "pan": "side"
+   }
+  ],
+  "Summit": [
+   {
+    "slices": [
+     [
+      652,
+      945
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     9,
+     4000
+    ],
+    "slot": [
+     3,
+     1
+    ],
+    "vol": [
+     64,
+     64
+    ],
+    "pan": "random"
+   }
+  ],
+  "Empire": [
+   {
+    "slices": [
+     [
+      980,
+      1115
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     24,
+     8000
+    ],
+    "slot": [
+     11,
+     1
+    ],
+    "vol": [
+     50,
+     40
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [],
+    "speed": null,
+    "prob": [
+     99,
+     8000
+    ],
+    "slot": [
+     9,
+     1
+    ],
+    "vol": [
+     50,
+     40
+    ],
+    "pan": "random"
+   },
+   {
+    "slices": [
+     [
+      127,
+      176
+     ]
+    ],
+    "speed": null,
+    "prob": [
+     299,
+     8000
+    ],
+    "slot": [
+     2,
+     1
+    ],
+    "vol": [
+     50,
+     40
+    ],
+    "pan": "side"
+   },
+   {
+    "slices": [],
+    "speed": null,
+    "prob": [
+     19,
+     8000
+    ],
+    "slot": [
+     1,
+     1
+    ],
+    "vol": [
+     30,
+     40
+    ],
+    "pan": "side"
+   }
+  ]
+ }
+}

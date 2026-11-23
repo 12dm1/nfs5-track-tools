@@ -1,0 +1,13 @@
+# Core: converter, sound, atmosphere model, tests
+numpy>=1.26
+Pillow>=10
+
+# Editors (track_editor, texture_editor)
+imgui-bundle>=1.6
+moderngl>=5.10
+glfw>=2.7
+
+# Optional
+# capstone>=5   tools/audio/nfs4_ambient_scripts.py (re-extracting the NFS4 ambience tables from nfshs.exe)
+# scipy>=1.11   tools/audio/ea_mt.py (NFS4 speech decoder, not used by the pipeline)
+# Blender 3.6+  tools/track/export_track_fragment.py runs blender_build_fragment.py inside Blender

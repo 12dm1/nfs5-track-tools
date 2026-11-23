@@ -1,0 +1,20 @@
+{
+ "_readme": [
+  "Per-slot corrections to the NFS4 ambience, made by ear in game (HS13/HS14).",
+  "Key is '<nfs4 track>/<tram slot>', lower case. Fields, all optional:",
+  "  interval_s  seconds between repeats; on a loop zone it also strips the",
+  "              loop points, turning a short looping sample into an",
+  "              intermittent one (a 1 s bird chirp reads as a stuck sample",
+  "              when PU loops it back to back)",
+  "  range       audible radius in metres, overriding LOOP_RANGE/POINT_RANGE",
+  "  spacing     metres between the points of a loop chain",
+  "  volume      PU volume 0..100, overriding the converted NFS4 volume",
+  "Anything not listed here is converted straight from the NFS4 tables."
+ ],
+
+ "hometown/8": {"interval_s": 7, "range": 60},
+ "hometown/9": {"interval_s": 11, "range": 60},
+
+ "hometown/1": {"range": 55, "volume": 55},
+ "hometown/2": {"range": 65, "volume": 55}
+}
