@@ -127,14 +127,18 @@ def main():
     ap.add_argument('--all', action='store_true')
     ap.add_argument('--out', default=os.path.join(nfs5cfg.WORK, 'build', 'texanim'))
     ap.add_argument('--install', metavar='GAME_DIR')
+    ap.add_argument('--directory', metavar='NAME',
+                    help='the PU directory of the one track, when convert_track.py got --directory')
     args = ap.parse_args()
     names = sorted(d for d in os.listdir(HS) if os.path.exists(os.path.join(HS, d, 'tr.frd')))
     wanted = names if args.all else args.tracks
     if not wanted:
         ap.error('name tracks or pass --all')
+    if args.directory and len(wanted) != 1:
+        ap.error('--directory names the directory of one track')
     os.makedirs(args.out, exist_ok=True)
     for name in wanted:
-        directory = directory_of(name)
+        directory = args.directory.lower() if args.directory else directory_of(name)
         fsh = os.path.join(args.install or GAME, 'GameData', 'Track', '%s.fsh' % directory)
         blob, listed = build_tan(name, fsh)
         path = os.path.join(args.out, '%s.tan' % directory)

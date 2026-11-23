@@ -52,8 +52,9 @@ Stakes. "Stock" = a format the unmodified game already reads; "new" = read only 
 | file | what | spec | code |
 |---|---|---|---|
 | `Data/Tracks/<T>/tr.frd` | blocks, polygons, vroad, objects, XObj, lights, sound sources | [HS1](findings/HS1-nfs4-track-migration.md), [HS5](findings/HS5-geometry-conversion.md), [HS12](findings/HS12-movable-objects.md); upstream: e-rk/speedtools `specs/frd.ksy` | `nfs4_frd.py` |
-| `tr0.qfs` | textures (RefPack SHPI), `<mirrored>` selection | [HS2](findings/HS2-texture-pipeline.md) | `nfs5_fsh.py` |
+| `tr0.qfs` | textures (RefPack SHPI), `<mirrored>` selection; codes `0x7B`+`0x2D` palette, `0x7D`, `0x7E`, and in community tracks `0x78` RGB565, `0x7F` RGB888, `0x6D` ARGB4444 | [HS2](findings/HS2-texture-pipeline.md), [new-tracks-frd.md](new-tracks-frd.md) | `nfs5_fsh.py` |
 | `tr.ini` | fog, fog regions, weather, lightning, sun, `[strip]` horizon | [HS7](findings/HS7-environment.md), [formats/atmosphere-ini.md](formats/atmosphere-ini.md) | `nfs5_environment.py`, `track_atmosphere.from_nfs4_ini` |
 | `spdfa.bin`, `spdra.bin` | AI speeds per slice | [HS6](findings/HS6-collision-and-ai.md) | `nfs5_track_files.decode_spd` |
 | `Data/Audio/Sfx/tram%02d.bnk` | ambience banks | [HS13](findings/HS13-ambient-sound.md) | `tools/audio/ea_bnk.py` |
 | `nfshs.exe` tables | ambience zones/scripts/object sounds | [HS13](findings/HS13-ambient-sound.md) | `tools/audio/nfs4_ambient_scripts.py` |
+| `Mixer.ini` (community tracks) | NFS Mixer install data; `Based On=N` = the stock track (tram bank number) whose ambience it borrows | [new-tracks-frd.md](new-tracks-frd.md) | `convert_track.ambient_track` |

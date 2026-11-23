@@ -18,9 +18,18 @@ python tools/track/install_ai_data.py --install <game> hometown # tuned AI lines
 Then run the game with a runtime that implements [runtime.md](runtime.md) (the PC wrapper with
 `[content] extended_content=1`, or nfs5-web). Hometown appears in the track list as a circuit.
 
-`--all` converts all 19 tracks. Track names on the command line are the NFS4 folder names (`Hometown`, `Coastal`,
-`Lostcany`...); the PU directory name is the lower-case name, except NFS4 `Coastal`, which becomes `dolphin`
-(Dolphin Cove) so it does not collide with PU's own `coastal`.
+`--all` converts every track folder found (the 19 High Stakes tracks, and community tracks if you put them there).
+Track names on the command line are the NFS4 folder names (`Hometown`, `Coastal`, `Lostcany`...); the PU directory
+name is the lower-case name, except NFS4 `Coastal`, which becomes `dolphin` (Dolphin Cove) so it does not collide
+with PU's own `coastal`. The directory must have at most 15 characters, only a-z 0-9 _, and not be a stock track's;
+the converter refuses anything else and `--directory <name>` (one track per run) sets another.
+
+**`nfs5ext.trk` lists only the tracks of this run.** Convert every track you want in the menu in one run (`--all`,
+or name them all); a track converted alone replaces the list, and the others drop out of the menu (their files stay).
+
+A track made by the community: [new-tracks-frd.md](new-tracks-frd.md) (`--ambient-from`, `--directory`). A first
+session step by step: [tutorial.md](tutorial.md). Every output file and how they depend on each other:
+[track-anatomy.md](track-anatomy.md).
 
 Partial rebuilds:
 
@@ -86,8 +95,9 @@ GameData/Track/<track>.aiprofile      NEW: AI speed profile
 GameData/Track/aiprofile_cars.txt     NEW: per-car profile scale
 ```
 
-`nfs5ext.trk` and `trackext.viv` are rebuilt as a whole every time: converting one track keeps the others that are
-already installed registered and audible.
+`nfs5ext.trk` and `trackext.viv` are rebuilt as a whole every time. `trackext.viv` always holds the banks of all
+19 High Stakes tracks, so a run never silences another track; `nfs5ext.trk` holds the 15 stock records and the
+tracks **of this run only** (see §1).
 
 ## 4. Hard rules (break one and the game crashes or the track misbehaves)
 
@@ -134,6 +144,7 @@ for the PC wrapper (command-line race setup and its logs).
 * **AI**: [pipeline/ai.md](pipeline/ai.md).
 * **Blender**: `export_track_fragment.py` cuts a rectangle of a PU track into a `.blend`/`.glb` with textures;
   `export_hs_walls.py` / `export_ai_lines.py` export walls and lines for inspection.
-* **Your own track** (not from NFS4): there is no direct path yet. The pieces are here (karT writer, FSH writer, sky
-  and sound writers, the `.hsw` wall format, frontend registration); what is missing is a source format and a
-  vroad/slice generator. The NFS4 reader (`nfs4_frd.py`) shows exactly what the converter needs from a source.
+* **Your own track**: today through the NFS4 format, made or edited in T3ED (the community's track editor) and
+  converted like any High Stakes track: [new-tracks-frd.md](new-tracks-frd.md). From a scene modelled in Blender:
+  planned, [plans/D2-own-tracks.md](plans/D2-own-tracks.md). What any generator has to produce:
+  [track-anatomy.md](track-anatomy.md).

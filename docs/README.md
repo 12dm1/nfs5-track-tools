@@ -3,10 +3,22 @@
 ## Read in this order
 
 1. [setup.md](setup.md): games, Python, `nfs5tools.ini`, repository layout.
-2. [pipeline.md](pipeline.md): converting a High Stakes track, stage by stage, the output files, the hard rules.
-3. [runtime.md](runtime.md): what the game runtime must patch or hook so the converted tracks load and play. Read
+2. [tutorial.md](tutorial.md): a first session: convert Hometown, race it in the browser with the AI driving,
+   change its fog, rebuild only the sky.
+3. [track-anatomy.md](track-anatomy.md): every file a PU track is made of, who reads it, what must agree between
+   them, the smallest track that loads. Read this before changing a track by hand or writing a generator.
+4. [pipeline.md](pipeline.md): converting a High Stakes track, stage by stage, the output files, the hard rules.
+5. [runtime.md](runtime.md): what the game runtime must patch or hook so the converted tracks load and play. Read
    this if you are writing or porting a runtime.
-4. [troubleshooting.md](troubleshooting.md): symptoms, causes, fixes, open items.
+6. [troubleshooting.md](troubleshooting.md): symptoms, causes, fixes, open items.
+
+[glossary.md](glossary.md): the terms (slice, vroad, chunk, article, SimD...), coordinates, units and track names.
+
+## Making a track of your own
+
+* [new-tracks-frd.md](new-tracks-frd.md): today's path: a track made or edited in T3ED (the NFS4 community's
+  editor), including the hundreds already published, converted like a High Stakes track. Tested on one.
+* [plans/D2-own-tracks.md](plans/D2-own-tracks.md): the plan for tracks modelled in Blender (not built yet).
 
 ## Guides
 

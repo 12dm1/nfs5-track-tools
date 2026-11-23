@@ -51,6 +51,11 @@ stock tracks keep their sound. Details and limits: [pipeline/ambient-sound.md](p
 PU's own barrier (`.edg`) is a single corridor per slice; NFS4 tracks have real walls, overpasses and shortcuts.
 The `.hsw` file ([formats/hsw.md](formats/hsw.md)) carries them, and the runtime collides the car with them.
 
+* **Which tracks are converted.** The ones with a `<track>.hsw` beside the CRP (the path at `00628964` with `.crp`
+  replaced by `.hsw`). Do not keep a list of names: community tracks convert under names of their own, and nfs5-web's
+  name list made one race without walls and without the AI of §8 (changed to the `.hsw` test on 2026-11-23). The
+  same flag turns on §8.
+
 * **Hook point.** `00410E25` stores `00498FF0` into `car+E2C`, the per-car collision step callback. Its prologue
   `83 EC 08 53 8B 5C 24 10` is 8 bytes of whole instructions without relative addresses, so it is safe to detour.
   Run your code before the original step (pre phase) and after it (post phase).

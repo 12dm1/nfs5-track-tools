@@ -696,6 +696,11 @@ Known object tags: ENDW (end wall), FNSH (finish), SIGN, GAS, TABL, SEAT, REST, 
 
 ## Adding New Tracks
 
+> **Superseded.** This list was written before any track was added and is kept as the record of that first
+> survey. It suggests editing `nfs5.trk` and `FEStrings.csv`; the tools never edit stock files (`nfs5ext.trk` and the
+> name table, HS8). Circuits need no start `.scn`, directory names are limited to 15 characters, textures must be
+> square. The current, tested description: [track-anatomy.md](../track-anatomy.md).
+
 ### Required Files
 
 A minimal new track needs:

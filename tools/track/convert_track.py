@@ -6,6 +6,11 @@
     python convert_track.py --all --art-only --install <game folder>
     python convert_track.py --all --install <game folder>
     python convert_track.py --all --walls-only --wall-inset 0.1 --install <game folder>
+    python convert_track.py NeighborhoodDrive --directory nbhdrive --ambient-from Uk --out work/build/tracks
+
+A track made by the community converts like a stock one (docs/new-tracks-frd.md): `--directory` when its folder
+name is longer than 15 characters, `--ambient-from` to choose whose ambient sound it borrows. nfs5ext.trk lists the
+tracks of this run only: convert every track you want in the menu at once.
 
 Stages, each covered by its own report and acceptance script:
 
@@ -24,6 +29,7 @@ game folder; without it, everything stays in the output directory.
 
 import argparse
 import os
+import re
 import shutil
 import sys
 
@@ -56,6 +62,28 @@ TRACK_DIRECTORIES = {
 
 def track_directory(name):
     return TRACK_DIRECTORIES.get(name.lower(), name.lower())
+
+
+# The engine keeps 15 characters of a track's directory name: a 17-character one loaded as its first 15
+# ("ERROR - Couldn't load track: 'neighborhooddri'") and the race crashed. The nfs5.trk field has 20 bytes.
+MAX_DIRECTORY = 15
+
+
+def check_directory(name):
+    """Refuse a PU directory name the game cannot load or that would overwrite a stock track's files."""
+    d = track_directory(name)
+    stock = {r[frontend.OFF_DIRECTORY:frontend.OFF_DIRECTORY + 20].split(b'\0')[0].decode('latin1').lower()
+             for r in frontend.read_trk(STOCK_TRK)}
+    problems = []
+    if len(d) > MAX_DIRECTORY:
+        problems.append('longer than %d characters' % MAX_DIRECTORY)
+    if not re.fullmatch(r'[a-z0-9_]+', d):
+        problems.append('only a-z, 0-9 and _ are safe in file names')
+    if d in stock:
+        problems.append('a stock Porsche Unleashed track has this directory: its files would be overwritten')
+    if problems:
+        raise SystemExit('%s -> directory "%s": %s. Pass --directory <name>.' % (name, d, '; '.join(problems)))
+    return d
 
 
 def track_display_name(name):
@@ -115,10 +143,41 @@ def convert_sky_only(name, out_root):
     return paths
 
 
+def ambient_track(name, src, override=None):
+    """The High Stakes track whose ambience (nfshs.exe scripts + tram bank) a track gets, or None.
+
+    A stock track has its own. A track made by the community has none in nfshs.exe; the NFS Mixer's `Mixer.ini`
+    next to its tr.frd names the stock track it is based on (`Based On=N`, N = the tram bank number, 14 = Uk),
+    whose bank its sound objects use. `--ambient-from <HS track>` picks one by hand, `--ambient-from none` none."""
+    tram = ambient.AmbientBuilder.tram_banks()
+    if override:
+        if override.lower() == 'none':
+            return None
+        if override.lower() not in {k.lower() for k in tram}:
+            raise SystemExit('--ambient-from %s: not a High Stakes track (%s)' % (override, ', '.join(sorted(tram))))
+        return override
+    if name.lower() in {k.lower() for k in tram}:
+        return name
+    mixer = next((os.path.join(src, f) for f in os.listdir(src) if f.lower() == 'mixer.ini'), None)
+    based = None
+    if mixer:
+        for line in open(mixer, encoding='latin1'):
+            k, _, v = line.partition('=')
+            if k.strip().lower() == 'based on' and v.strip().isdigit():
+                based = next((t for t, n in sorted(tram.items()) if n == int(v)), None)
+    if based:
+        print('%-10s ambience of %s (Mixer.ini "Based On"); --ambient-from changes it' % (name, based))
+    else:
+        print('%-10s no ambient sound: not a High Stakes track and no Mixer.ini "Based On"; '
+              'pass --ambient-from <HS track> to borrow one' % name)
+    return based
+
+
 def convert_one(name, out_root, verbose=True, ambient_builder=None,
-                wall_inset=None):
+                wall_inset=None, ambient_from=None):
     src = os.path.join(HS, name)
     directory = track_directory(name)
+    sound_of = ambient_track(name, src, ambient_from) if ambient_builder else None
     track_out = os.path.join(out_root, 'GameData', 'Track')
     os.makedirs(track_out, exist_ok=True)
 
@@ -159,7 +218,7 @@ def convert_one(name, out_root, verbose=True, ambient_builder=None,
     env_result = environment.convert(
         track, directory, src, track_out, {e['tag']: e for e in entries},
         lambda e: fsh.decode_entry(sky, e), atmosphere.sky_bin_for(atmo),
-        nfs4_name=name, ambient=ambient_builder)
+        nfs4_name=sound_of, ambient=ambient_builder if sound_of else None)
     stats['audio'] = env_result['audio']
     stats['audio_banks'] = env_result['audio_banks']
 
@@ -264,6 +323,12 @@ def main():
                     help='rewrite only GameData/Track/<track>.crp')
     ap.add_argument('--walls-only', action='store_true',
                     help='rewrite only GameData/Track/<track>.hsw')
+    ap.add_argument('--directory', metavar='NAME',
+                    help='the PU directory name of the one track converted (default: its folder name in lower case; '
+                         '15 characters at most, a-z 0-9 _, not a stock track\'s)')
+    ap.add_argument('--ambient-from', metavar='HS_TRACK',
+                    help='a track made by the community: take the ambient sound of this High Stakes track '
+                         '(default: the one its Mixer.ini is based on), or "none"')
     args = ap.parse_args()
 
     available = sorted(d for d in os.listdir(HS)
@@ -277,6 +342,12 @@ def main():
     names = available if args.all else args.tracks
     if not names:
         ap.error('name the tracks or pass --all')
+    if args.directory:
+        if len(names) != 1:
+            ap.error('--directory names the directory of one track: convert that track on its own')
+        TRACK_DIRECTORIES[names[0].lower()] = args.directory.lower()
+    for n in names:
+        check_directory(n)
 
     out_root = os.path.normpath(args.out)
     os.makedirs(out_root, exist_ok=True)
@@ -332,7 +403,7 @@ def main():
 
     builder, registry = make_ambient_builder()
     all_stats = [convert_one(n, out_root, ambient_builder=builder,
-                             wall_inset=args.wall_inset) for n in names]
+                             wall_inset=args.wall_inset, ambient_from=args.ambient_from) for n in names]
     registry.save()
     banks = write_sound_archive(all_stats, out_root)
     added = register(all_stats, out_root)

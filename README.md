@@ -45,7 +45,9 @@ strings and the sound archive to them, and add High Stakes walls, animated textu
 
 ## Documentation
 
-Start with [docs/README.md](docs/README.md). For agents and contributors: [AGENTS.md](AGENTS.md).
+Start with [docs/README.md](docs/README.md); a first session step by step: [docs/tutorial.md](docs/tutorial.md);
+what a track is made of: [docs/track-anatomy.md](docs/track-anatomy.md). Tracks made by the NFS4 community (T3ED)
+convert too: [docs/new-tracks-frd.md](docs/new-tracks-frd.md). For agents and contributors: [AGENTS.md](AGENTS.md).
 
 ## Credits
 

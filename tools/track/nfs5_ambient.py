@@ -213,6 +213,11 @@ class AmbientBuilder:
         # The exe spells the tracks LostCany/RockyPas, the directories don't.
         self._names = {k.lower(): k for k in self.ambient['tram_bank']}
 
+    @staticmethod
+    def tram_banks():
+        """{High Stakes track as nfshs.exe spells it: tram bank number}, the tracks that have ambience tables."""
+        return dict(_load(AMBIENT_JSON)['tram_bank'])
+
     def _key(self, nfs4_track):
         return self._names[nfs4_track.lower()]
 
@@ -513,9 +518,14 @@ def _sound_sources(track):
 # ------------------------------------------------------------- whole set ----
 
 def hs_track_names(game_root):
-    """Every NFS4 track that has a tr.frd, in directory order."""
+    """Every High Stakes track with ambience tables in nfshs.exe that has a tr.frd, in directory order.
+
+    A track made by the community has no tables of its own and is left out; convert_track.py gives it the banks of
+    the stock track it is based on, which are in the archive already."""
     root = nfs5cfg.HS_TRACKS
-    return sorted(d for d in os.listdir(root) if os.path.exists(os.path.join(root, d, 'tr.frd')))
+    known = {k.lower() for k in AmbientBuilder.tram_banks()}
+    return sorted(d for d in os.listdir(root)
+                  if d.lower() in known and os.path.exists(os.path.join(root, d, 'tr.frd')))
 
 
 def build_all(game_root, write_scn_for, out_root, directory_of, verbose=True):

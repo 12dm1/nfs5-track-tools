@@ -1,7 +1,9 @@
 # Rules for agents and contributors
 
 Read [docs/README.md](docs/README.md) first; [docs/pipeline.md](docs/pipeline.md) and
-[docs/runtime.md](docs/runtime.md) are the two pages everything else hangs on.
+[docs/runtime.md](docs/runtime.md) are the two pages everything else hangs on. Before you make or change a track:
+[docs/track-anatomy.md](docs/track-anatomy.md) (every file and what must agree between them) and
+[docs/glossary.md](docs/glossary.md). To check your work in a race: [docs/tutorial.md](docs/tutorial.md) step 2.
 
 ## Never
 
@@ -16,7 +18,10 @@ Read [docs/README.md](docs/README.md) first; [docs/pipeline.md](docs/pipeline.md
 
 ## Hard format rules (each one cost a crash or a day)
 
-* Textures: power-of-two squares.
+* Textures: power-of-two squares; a track's textures fit 20 MB as ARGB8888 with mips (`nfs5_fsh.fit_budget`), or the
+  race crashes in `TEXTURE_converttype`.
+* Directory names: at most 15 characters, a-z 0-9 _, never a stock track's (`convert_track.check_directory`).
+* `nfs5ext.trk` holds only the tracks of the last converter run: convert every wanted track in one run.
 * CRP: the last LOD distance is 10000; `sn` MiscData is last; no `sf`; camera clips (`CmAn`) copied from alps;
   type-3 XObj pose from keyframe 0; every material's `mt+0` surface word set.
 * Sound banks: one slot, mono EA-XA, loop start at sample 0, <= 28 000 samples, <= 0x7FFC bytes, bank number < 1000

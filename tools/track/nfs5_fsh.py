@@ -40,6 +40,8 @@ CODE_ARGB4444 = 0x6D
 CODE_PAL8 = 0x7B
 CODE_PALETTE = 0x2D
 CODE_ARGB1555 = 0x7E
+CODE_RGB565 = 0x78
+CODE_RGB888 = 0x7F
 CODE_TEXT = 0x6F
 
 # Hometown's source texture 19 (QFS tag ``0021``) is the black-to-grey mask
@@ -153,6 +155,8 @@ def decode_entry(data, entry):
     Only two codes occur across the 38 shipped archives: 0x7B palettised
     (4878 entries) and 0x7D ARGB8888 (25 entries, e.g. Coastal 'LRAY').
     NFS4's 0x7D uses the same B,G,R,A order as NFS5, so it is a straight copy.
+    Tracks made by the community (FSHTool, T3ED) also use 0x78 RGB565 (most of
+    the entries of a modern custom track), 0x7F RGB888 and 0x6D ARGB4444.
     """
     if entry['code'] == CODE_PAL8:
         return decode_pal8(data, entry)
@@ -162,8 +166,32 @@ def decode_entry(data, entry):
         return w, h, finish_alpha(bytearray(data[o:o + w * h * 4]), w, h)
     if entry['code'] == CODE_ARGB1555:
         return decode_argb1555(data, entry)
+    if entry['code'] in (CODE_RGB565, CODE_RGB888, CODE_ARGB4444):
+        return decode_direct(data, entry)
     raise ValueError('entry %r: unsupported pixel format %#04x'
                      % (entry['tag'], entry['code']))
+
+
+def decode_direct(data, entry):
+    """RGB565, RGB888 (B,G,R bytes) and ARGB4444 -> (w, h, BGRA bytearray).
+    565 and 888 carry no alpha: every texel is opaque."""
+    w, h, code = entry['w'], entry['h'], entry['code']
+    o = entry['off'] + 16
+    out = bytearray(w * h * 4)
+    if code == CODE_RGB888:
+        for i in range(w * h):
+            out[i * 4:i * 4 + 4] = data[o + i * 3:o + i * 3 + 3] + b'\xff'
+        return w, h, finish_alpha(out, w, h)
+    for i in range(w * h):
+        c = data[o + i * 2] | (data[o + i * 2 + 1] << 8)
+        if code == CODE_RGB565:
+            r, g, b = (c >> 11) & 0x1F, (c >> 5) & 0x3F, c & 0x1F
+            px = ((b << 3) | (b >> 2), (g << 2) | (g >> 4), (r << 3) | (r >> 2), 255)
+        else:                                       # ARGB4444
+            a, r, g, b = (c >> 12) & 0xF, (c >> 8) & 0xF, (c >> 4) & 0xF, c & 0xF
+            px = (b * 17, g * 17, r * 17, a * 17)
+        out[i * 4:i * 4 + 4] = bytes(px)
+    return w, h, finish_alpha(out, w, h)
 
 
 def decode_argb1555(data, entry):
@@ -596,11 +624,46 @@ def write_frontend_fsh(textures, dirid=b'GIMX'):
 
 # --------------------------------------------------------------- pipeline ---
 
+# The THRASH driver tells the game how much texture memory it has (about+0x70: 32 MB in nfs5-web and in the PC
+# wrapper), and the game fits a track's textures, the cars, the sky and the HUD into it. A track over that fails in
+# TEXTURE_converttype (005350E0: "UNABLE TO CONVERT TO TARGET TEXTURE TYPE") and the race crashes: a community track
+# with 654 textures (~37 MB as ARGB8888 with mips) did, 2026-11-23. The heaviest stock track, castle, takes ~21 MB;
+# the 19 High Stakes tracks 3 MB at most.
+TRACK_TEXTURE_BUDGET = 20 << 20
+
+
+def texture_bytes(w, h):
+    """ARGB8888 with the full mip chain, as write_fsh stores it."""
+    return w * h * 4 * 4 // 3
+
+
+def fit_budget(textures, budget=TRACK_TEXTURE_BUDGET, min_size=MIN_TRACK_SIZE):
+    """Halve the largest textures until the archive fits the budget. -> (textures, number of halvings)"""
+    total = sum(texture_bytes(w, h) for _tag, w, h, _bgra in textures)
+    out, halved = list(textures), 0
+    while total > budget:
+        i = max(range(len(out)), key=lambda k: out[k][1] * out[k][2])
+        tag, w, h, bgra = out[i]
+        if max(w, h) <= min_size:
+            break
+        nw, nh, small = downsample(bgra, w, h)
+        total += texture_bytes(nw, nh) - texture_bytes(w, h)
+        out[i] = (tag, nw, nh, small)
+        halved += 1
+    return out, halved
+
+
 def build_fsh_bytes(src_path, mips=True, sfx_path=None, extra_textures=()):
     """tr0.qfs -> uncompressed NFS5 SHPI bytes plus the (index, tag, w, h) list."""
     textures = converted_textures(src_path, sfx_path=sfx_path)
     textures.extend((tag,) + tuple(ensure_square_pot(w, h, bgra))
                     for tag, w, h, bgra in extra_textures)
+    before = sum(texture_bytes(w, h) for _tag, w, h, _bgra in textures)
+    textures, halved = fit_budget(textures)
+    if halved:
+        print('textures: %.1f MB is over the %d MB a track can use; %d halved, now %.1f MB'
+              % (before / 2 ** 20, TRACK_TEXTURE_BUDGET >> 20, halved,
+                 sum(texture_bytes(w, h) for _tag, w, h, _bgra in textures) / 2 ** 20))
     manifest = [(i, tag, w, h) for i, (tag, w, h, _bgra) in enumerate(textures)]
     return write_fsh(textures, mips=mips), manifest
 
